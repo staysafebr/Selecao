@@ -1,0 +1,151 @@
+==========================================================================================
+[ Stay Safe ]
+
+- http://www.staysafe.com.br
+- selecao@staysafe.com.br
+==========================================================================================
+							           Happy Hacking >:) @2016
+==========================================================================================
+
+	Introdução
+
+	A Internet das Coisas ou Internet of Things (IoF), é um termo  utilizado 
+	para designar a conectividade entre vários tipos de objetos do dia a dia   
+	sensíveis à internet, desde de eletrodomésticos até outros  equipamentos  
+	espalhados pela cidade. [2] 
+
+	*** Exemplo: Um Beaglebone Black conectado a  um leitor de RFID. 
+
+	Conceitualmente,  é  a  posibilidade  de conectar o  mundo  físico com o 
+	mundo  digital por  meio da  web.   Assim, com  o mundo  cada  vez  mais  
+	interconectado,  não  apenas  as pessoas se  comunicam,  mas  "cada  vez 
+	mais os objetos estão "conversando" uns com os outros". [2] 
+
+	*** Exemplo: Protocolo MQTT para comunicação.
+
+	A Internet das Coisas é  a  conexão de todas as  máquinas, dispositivos, 
+	sensores, automóveis, câmeras e  outras "coisas" que  buscam  otimizar a 
+	vida das pessoas  e  organizações, "além de melhorar operações do dia  a  
+	dia  e  a  economizar tempo,  dinheiro  e  até  mesmo vidas". [2]
+
+	E essa ampliação da conectividade é particularmente útil para uma  série 
+	de atividades rotineiras. Os  objetos que  estiverem em rede conseguirão 
+	fornecer dados para  sistemas  integrados  e  controlar   uma   série de 
+	atividades. [2]
+
+	*** Exemplo: Realizar leituras programadas através de um leitor RFID.
+	     
+	Há  várias   ferramentas   capazes de  armazenar a história dos objetos, 
+	como os velhos  códigos de  barra ou os  sensores  wireless,  mas a  que 
+	vem  sendo  mais  utilizada na  pesquisa de  Internet  das  Coisas  é  a 
+	tecnologia   RFID   (Identificação por Radiofrequência),  que   rastreia 
+	coisas  por  meio  de   ondas  de  rádio e,  geralmente,  é acoplada aos 
+	objetos por meio de uma simples etiqueta. [1]
+
+	Porém   muito  ainda   precisa  ser feito para consolidar a  comunicação 
+	inteligente de  máquina para   máquina.  O  maior  desafio  é  a conexão 
+	entre os objetos e uma rede externa onde eles possam buscar dados. [1]
+
+	Referências:
+
+	[1] Sebrae: 	    	http://www.sebrae.com.br
+	[2] Computer World:	http://computerworld.com.br
+
+==========================================================================================
+	
+	O Problema
+
+	Você  é  programador  e  trabalha  com "embedded systems".  Sua  função e 
+	manipular  diversos   leitores   de   RFID   espalhados   pelo    Brasil.  
+	
+	Os leitores   estão em   empresas   diferentes e  possuem   configurações 
+	diferentes. Por exemplo, Você pode  ter  um  leitor em Tucuruí/PA e um em 
+	Goiânia/GO,  e   estes   leitores  possuem  IP diferentes e configurações   
+	diferentes, o  de  Tucuruí  utiliza  um   modo de  leitura  "Transparent" 
+	enquanto o de Goiânia utiliza o modo "HID".
+
+	Os  leitores  de RFID  estão  ligados a um  sistema  embarcado. O sistema 
+	embarcado utilizado é o Beaglebone Black. Você  possui acesso SSH a todos
+	os  sistemas embarcados e  assim  pode  configurar  os leitores  de RFID.
+	E também pode executar um código em Python para realizar leitura de TAGS.
+
+	A empresa onde você trabalha fechou contrato um grande produtor de vinhos  
+	e  agora você possui uma quantidade enorme de leitores para  monitorar  e 
+	configurar diariamente. O acesso SSH se tornou inviavel para configuração 
+	e manipulação dos leitores.  
+
+	Como  funcionam  leitores  de RFID ?  Nunca vi  um   executando  leituras 
+	juntamente com um sistema embarcado. Simples acesse o video  abaixo de um
+	projeto realizado pela Stay Safe.
+
+	Video:
+		[1] - https://www.youtube.com/watch?v=WO1z-SMeLVs
+		[2] - https://www.youtube.com/watch?v=NYCjm91gbnY
+
+	Para resolver este problema você precisa realizar 3 trabalhos diferentes:
+
+	[1]   Criar  uma   interface  WEB   utilizando  o  Framework  Django para 
+      	      cadastrar e  configurar  os  leitores de  RFID. 
+
+	[2]   Criar um mecanismo  para  gerar um    arquivo de  configuração para  
+              o leitor em questão. Sempre  que cadastrar  você  tem  que  ter uma 
+              opção para gerar um arquivo de configuração que  poderá ser enviado  
+              via MQTT para o sistema embarcado.
+
+	[3]   Utilizar  o PUSH  para  enviar  a   configuração   de   um  leitor.
+              Você  possui   um dispositivo movel e deseja receber a configuração
+	      dos leitores de RFID ou até mesmo a quantidade de TAGS lidas.
+
+	Para realizar esta tarefa você fez algumas anotações e contou com a ajuda
+	do   pessoal  de  infra-estrutura,  eles  forneceram o servidor  MQTT  já 
+	configurado. E  avisaram  que voce  precisar ter o JAVA instalado  em sua 
+	máquina para executar o servidor.
+
+	OBS: Execute o comando abaixo para inicializar o MQTT:
+
+	# ./run.sh  
+
+	Anotações:
+
+	[1] - Crie uma interface para cadastro de leitores de RFID.
+	      	Os dados utilizados são: 
+			[1.1] IP (Exemplo: 192.168.1.100).
+			[1.2] Porta (Exemplo: 1842).
+			[1.3] Região (Exemplo: Goiânia/GO).
+			[1.4] Identificador p/ Arquivo de Configuração (Foreign Key).  
+	
+	[2] - Crie uma interface para cadastro de configurações.
+	      	Os dados utilizados são: 
+	      		[2.1] Tipo de modo de leitura (Transparent ou HID).
+ 			[2.2] Região do leitor (Brazil [13] ou USA [14]).
+			[2.3] Algoritmo EPC (Single Cycle [SS] ou Raw [RW]).
+			[2.4] ID do Leitor Fisico.
+
+	[2] - Servidor MQTT:
+
+	Para  enviar os   dados, ou  seja, o  arquivo de  configuração  dos leitores, 
+	utilize um cliente chamado PAHO MQTT.
+
+	Link: http://www.hivemq.com/blog/mqtt-client-library-paho-python
+
+	[3] - Trabalhando com o PUSH:
+
+	Alguns projetos que podem ajudar :)
+
+	Links:
+
+	- https://github.com/stephenmuss/django-ios-notifications
+	- https://github.com/jleclanche/django-push-notifications
+	- http://fueled.github.io/django-push-notifications/
+	- http://www.techstricks.com/django-push-notifications-mongoengine/
+
+	Finalizando
+
+	Pense antes de resolver o problema, não se preocupe em resolver os 3 items, 
+	faça o que conseguir pois tudo será avaliado e cada item seu peso.
+
+	"may the force be with you..."	
+
+==========================================================================================
+http://www.staysafe.com.br 							     @2016
+==========================================================================================
