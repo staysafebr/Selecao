@@ -6,13 +6,13 @@
 >	R: Primeiramente faça um FORK do problema.
 >	Link do Problema: https://github.com/staysafebr/Selecao.git
 
-[2]	Como devo entregar a solução do meu problema ? <br>
+<b>[2]</b>	Como devo entregar a solução do meu problema ? <br>
 >	R: Você deve entregar via PULL-REQUEST utilizando o GITHUB.
 
-[3]	Como deve ser a estrutura de arquivos para entrega ? <br>
+<b>[3]</b>	Como deve ser a estrutura de arquivos para entrega ? <br>
 >	R: Crie uma pasta com o seu nome e coloque la dentro a solução para o problema. Lembrando que a solução deve conter um README.txt.
 
-[4]	Eu nunca trabalhei com o GITHUB, como organizo meus arquivos para entrega do problema ? <br>
+<b>[4]</b>	Eu nunca trabalhei com o GITHUB, como organizo meus arquivos para entrega do problema ? <br>
 >	R: Execute os comandos contidos no tópico NEWBIES.
 
 
