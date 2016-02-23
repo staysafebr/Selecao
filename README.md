@@ -1,6 +1,6 @@
 ### Seleção Stay Safe ###
 
-<b> Data Início:	22/02/2016	(segunda-feira) | 00:00:00 </b> 
+<b> Data Início:	22/02/2016	(segunda-feira) | 00:00:00 </b> <br> 
 <b> Data Fim:	29/02/2016	(segunda-feira)	| 00:00:00 </b>
 
 ### [ F.A.Q ]
