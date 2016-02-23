@@ -25,7 +25,7 @@
 >	Acessando o Link: (https://github.com/staysafebr/Selecao). Clique em "fork" do lado direito.
 
 <b>[3]</b>	Faça download do seu projeto. Utilizando o comando abaixo no GNU/Linux: <br>	
->	# git clone https://github.com/staysafebr/Selecao
+>	# git clone https://github.com/seu-usuario/Selecao.git
 	
 
 <b>[4]</b>	Faça as alterações necessárias no Projeto. <br>
