@@ -2,7 +2,7 @@
 
 ### [ F.A.Q ]
 
-[1]	Como começar a resolver meu problema ? <br>
+###### [1]	Como começar a resolver meu problema ? <br>
 	R: Primeiramente faça um FORK do problema.
 
 	Link do Problema: https://github.com/staysafebr/Selecao.git
