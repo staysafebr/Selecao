@@ -1,6 +1,6 @@
 ### Seleção Stay Safe ###
 
-# [ F.A.Q ]
+### [ F.A.Q ]
 
 [1]	Como começar a resolver meu problema ?
 	R: Primeiramente faça um FORK do problema.
@@ -17,7 +17,7 @@
 	R: Execute os comandos contidos no tópico NEWBIES.
 
 
-# [ NEWBIE ]
+### [ NEWBIE ]
 
 [1]	Crie uma conta no github. Acessando o link: (https://github.com).
 
