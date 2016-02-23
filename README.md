@@ -30,7 +30,7 @@
 
 <b>[4]</b>	Faça as alterações necessárias no Projeto. <br>
 
-<b>[5]</b>	Envie as alterações para o seu FORK. Utilizando o comando abaixo no GNU/Linux: <br>
+<b>[5]</b>	Envie as alterações para o seu FORK. Utilizando o comando abaixo no GNU/Linux: 
 >	# git push -u
 >	OBS: Este comando vai solicitar seu usuário e senha do GITHUB.
 
