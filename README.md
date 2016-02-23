@@ -1,5 +1,8 @@
 ### Seleção Stay Safe ###
 
+## <b> Data Início:	22/02/2016	(segunda-feira) | 00:00:00 </b> 
+## <b> Data Fim:	29/02/2016	(segunda-feira)	| 00:00:00 </b>
+
 ### [ F.A.Q ]
 
 <b>[1]</b>	Como começar a resolver meu problema ? <br>
@@ -33,7 +36,6 @@
 <b>[5]</b>	Envie as alterações para o seu FORK. Utilizando o comando abaixo no GNU/Linux: 
 >	# git push -u <br>
 >	OBS: Este comando vai solicitar seu usuário e senha do GITHUB.
-
 <b>[6]</b>	Pronto suas alterações estão no seu Projeto FORK :) <br>
 
 <b>[7]</b>	Agora para finalizar clique em "New pull request". <br>
